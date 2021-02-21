@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    width: 100%;
+    padding:0 3.5%;
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+header{
+    padding: 50px 0;
+    position: relative;
+    background-color: #005499;
+}
+
+header img{
+    top: 50%;
+    left:50%;
+    margin-right: -50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+strong{
+    font-variant: small-caps;
+}
+
+.title h2{
+    margin-top:25px;
+    font-size: 35px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+section h2{
+    margin: 25px 0;
+    font-size: 25px;
+    font-variant: small-caps;
+}
+
+section p{
+    font-size: 17.5px;
+    text-align: justify;
+}
+
+p a{
+    color: blue;
+    text-decoration: none;
+}
+
+h4{
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* ESTILIZAÇÃO FOOTER */
+
+footer{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+footer.rodape-02 h5{
+    color: #FFFFFF;
+    padding: 20px 0;
+    font-weight: normal;
+    font-variant: small-caps;
+    background-color: #005499;
+}
+
+footer a{
+    color: #F78201;
+    font-size: 15px;
+    text-decoration: none;
+    
+
+    transition: 1s;
+}
+
+footer a:hover{
+    color: #FFFFFF;
+}

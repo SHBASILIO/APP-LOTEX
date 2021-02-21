@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body{  
+    background-color: #BFBFBF;
+}
+
+body{
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+/* CLASSES AUXILIARES */
+
+.center{
+    width: 100%;
+    padding:0 4%;
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+.container{
+    width: 100%;
+    padding:0 4%;
+    margin: 0 auto;
+    max-width: 968px;
+
+    height: 100px;
+    position: relative;
+    align-content: center;
+
+    display: grid;
+    grid-template-areas: 
+        "lgo ... nav";
+    grid-auto-columns: auto 1fr auto;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header{
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    background-color: #005499;
+}
+
+.logo{
+    grid-area: lgo;
+}
+
+.nav-bar{
+    grid-area: nav;
+
+    display: grid;
+    align-content: center;
+}
+
+.nav-bar ul{
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+}
+
+.nav-bar a{
+    color: #CCC;
+    font-size: 1em;
+    position: relative;
+    font-variant: small-caps;
+    transition: all 0.45s ease-in;
+}
+
+.nav-bar a{
+    font-size: 18px;
+}
+
+.nav-bar a::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color:currentColor;
+
+    left: 0;
+    top: -10px;
+    position: absolute;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.25s ease-in;
+}
+
+.nav-bar a:hover::before{
+    transform: scaleX(1);
+}
+
+.nav-bar a::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color:currentColor;
+
+    left: 0;
+    bottom: -10px;
+    position: absolute;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.25s ease-in;
+}
+
+.nav-bar a:hover::after{
+    transform: scaleX(1);
+}
+
+main section{
+    height: 95vh;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+main section img{
+    top: 50%;
+    left:50%;
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+}
+
+/* QUOTE | BOX MENSAGEM */
+
+.square{
+	height: 0; /* A mágica está aqui */
+	width: 100%;
+    float: left;
+
+    margin: 0 auto;
+    padding-top:210px;
+    padding-bottom:25%; /* ... e está aqui */
+    position: relative;
+}	
+
+.boxMsg{
+	width: 100%;
+  	height:100%;
+	position: absolute;
+  	text-align: center;
+   	border-radius: 5px;
+   	background-color: #005499;
+}
+
+.boxMsg:before{
+	content: '';
+	height: 100%; 
+  	display: inline-block;
+  	vertical-align: middle;
+  	margin-right: -0.45em;
+}
+
+.boxMsg p{
+  	width: 80%;
+  	color: #F46C0B;
+  	font-size: 31px;
+  	display: inline-block;
+  	vertical-align: middle;
+  	font-family: 'Dancing Script', cursive;
+}
+
+section.boxQuote{
+	padding-top: 220px;
+}
+
+section.boxQuote input{
+	float:left;
+	width: calc(99% / 2);
+	height: 45px;
+	margin-left: 1.5px;
+    position: relative;
+}
+
+section.boxQuote input[type=button]{
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 17px;
+	border-radius: 3.5px;
+
+	color: #F46C0B;
+	font-variant: small-caps;
+	border:1px solid #CCCCCC;
+	background-color:#005499;
+	
+	transition: 1000ms;
+}
+
+section.boxQuote input[type=button]:hover{
+	color: #005499;
+	background-color:#00549944;
+}
+
+/* FOOTER */
+
+footer{
+    font: 12.5;
+    padding: 15px 0;
+    margin-top:auto;
+    background-color: #005499;
+}
+
+footer p{
+    color: #CCC;
+    font-size: 1em;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+footer p a{
+    color: #CCC;
+}
+
+footer p a:hover{
+    color: #F46C0B;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px){
+    .container{
+        position: relative;
+        grid-template-areas: 
+            "lgo ... mnu";
+    }
+
+    .menu{
+        display: grid;
+        grid-area: mnu;
+        align-content: center;
+    }
+
+    .nav-bar a{
+        font-size: 27px;
+    }
+    
+    .hamburguer::after{
+        content: "";
+        width: 100%;
+        height:100%;
+
+        left: 0;
+        top: 10px;
+        cursor: pointer;
+        position: absolute;
+        background-color: #CCC;
+        transition: all 0.45s ease-out;
+    }
+
+    .hamburguer{
+        width: 30px;
+        height: 5px;
+        cursor: pointer;
+        position: relative;
+        background-color: #CCC;
+        transition: all 0.45s ease-out;
+    }
+
+    .hamburguer::before{
+        content: "";
+        width: 100%;
+        height:100%;
+
+        left: 0;
+        top: -10px;
+        cursor: pointer;
+        position: absolute;
+        background-color: #CCC;
+        transition: all 0.45s ease-out;
+    }
+
+    .close-btn{
+        width: 32px;
+        transform: rotateZ(45deg);
+    }
+    
+    .close-btn::before, .close-btn::after{
+        top: 0;
+        transform: rotateZ(90deg);
+    }
+
+    .nav-bar{
+        left:0;
+        top:100px;
+        position: absolute;
+
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color: #007EE6;
+
+        transform: translateX(100%);
+        transition: all 0.45s ease-out;
+    }
+    .nav-bar ul{
+        display: grid;
+        grid-gap: 40px;
+        grid-auto-flow: row;
+        justify-content: center;
+    }
+
+    .menu-opened{
+        transform: translateX(0);
+    }
+}

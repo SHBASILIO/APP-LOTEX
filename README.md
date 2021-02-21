@@ -1,6 +1,6 @@
 ### PROJETO DE ESTUDO | APP LOTEX (SITE)
-<p text-align:justify> Este projeto constitui-se em um gerador de números aleatórios para as principais loterias do Brasil.</p>
-
+<p text-align:justify> Este projeto de estudo constitui-se em um gerador de números aleatórios para as principais loterias do Brasil. Foi desenvolvido utilizando além de HTMl e CSS, o JavaScript.</p>
+ 
 <ul>
    <li> Quina </li>
    <li> Lotofácil</li>
